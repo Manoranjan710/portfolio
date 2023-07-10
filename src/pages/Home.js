@@ -26,7 +26,7 @@ const Home = () => {
               <SocialMedia/>
         </div>
         <div>
-            <img src="../../images/profile_image.jpg" alt="" className=' h-[8rem] w-[9rem] md:mt-0 mt-3 md:h-[25rem] md:w-[40rem] md:mx-auto md:ml-10 md:rounded-3xl rounded-lg shadow-md shadow-white '  />
+            <img src="../../images/profile_image.jpg" alt="" className=' h-[8rem] w-[9rem] md:mt-0 mt-3 md:h-[20rem] md:w-[18rem] md:mx-auto md:ml-10 md:rounded-3xl rounded-lg shadow-md shadow-white '  />
         </div>
       </div>
     </div>
