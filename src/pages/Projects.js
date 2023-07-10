@@ -2,9 +2,9 @@ import React from "react";
 
 const Projects = () => {
   return (
-    <div className="bg-[#4d4c4c]   text-white">
-      <div className=" grid md:grid-flow-row md:grid-cols-2 grid-flow-col grid-rows-4 md:gap-7 gap-0 justify-items-center">
-        <div className=" md:h-[min] h-fit shadow-lg shadow-black bg-slate-100 p-6 m-8 text-black rounded-lg w-[15rem] md:w-[30rem]  ">
+    <div className="bg-[#4d4c4c] h-full md:min-h-fit   text-white">
+      <div className=" grid md:grid-flow-row md:grid-cols-2 grid-flow-col md:grid-rows-2 grid-rows-4 md:gap-7 gap-0 justify-items-center">
+        <div className=" md:h-min h-fit shadow-lg shadow-black bg-slate-100 p-6 m-8 text-black rounded-lg w-[15rem] md:w-[30rem]  ">
           <a
             href="https://shopping-cart-nine-ochre.vercel.app/"
             target="_blank"
