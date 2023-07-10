@@ -3,13 +3,13 @@ import React from "react";
 const About = () => {
   return (
     <div className="bg-[#4d4c4c] md:h-screen text-white p-8">
-      <h1 className=" text-cyan-400 md:text-3xl text-xl font-bold font-['Raleway']">
+      <h1 className="text-[#d4e9fa] md:text-3xl text-xl font-bold font-['Raleway']">
         {" "}
-        About me...
+        ABOUT ME...
       </h1>
-      <h2 className="text-white md:text-xl mt-2 ">
+      <h2 className="text-white md:text-xl mt-2 md:mt-6 ">
         {" "}
-        <span className="md:text-2xl text-lg  text-cyan-400  font-semibold"> Education: </span> 🎓
+        <span className="md:text-2xl text-lg text-[#d4e9fa]  font-semibold "> Education: </span> 🎓
         Bachelor's in Civil Engineering
       </h2>
       <p className=" text-white md:text-xl mt-3 ">
@@ -35,7 +35,7 @@ const About = () => {
       </p>
 
       <div className="md:mt-10 mt-3">
-        <h1 className=" text-cyan-400 md:text-3xl text-lg font-semibold md:font-bold">
+        <h1 className=" text-[#d4e9fa] md:text-3xl text-lg font-semibold md:font-bold">
           {" "}
           Technologies I can work with...{" "}
         </h1>
