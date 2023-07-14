@@ -1,4 +1,5 @@
 import React from "react";
+import BackHome from "../components/BackHome";
 
 const About = () => {
   return (
@@ -122,6 +123,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <BackHome/>
     </div>
   );
 };

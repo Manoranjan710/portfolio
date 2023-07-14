@@ -1,4 +1,5 @@
 import React from "react";
+import BackHome from "../components/BackHome";
 
 const Contact = () => {
   // const [name, setName] = useState('');
@@ -26,7 +27,7 @@ const Contact = () => {
   // };
 
   return (
-    <div className="bg-[#4d4c4c] h-screen flex md:justify-center md:items-center">
+    <div className="bg-[#4d4c4c] h-screen flex flex-col md:justify-center md:items-center">
       <div className="md:w-[40%] md:p-6 p-4 h-fit md:mx-0 mx-auto md:mt-0 mt-10 w-[60%]  bg-slate-900 rounded shadow-lg shadow-black">
         <h2 className="md:text-2xl text-xl font-semibold md:font-bold mb-4  text-white">Contact Me</h2>
         <form
@@ -76,7 +77,11 @@ const Contact = () => {
           </button>
         </form>
       </div>
+      <div className="flex justify-center items-center p-5">
+      <BackHome />
+      </div>
     </div>
+    
   );
 };
 

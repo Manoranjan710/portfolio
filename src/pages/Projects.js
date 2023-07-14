@@ -1,4 +1,5 @@
 import React from "react";
+import BackHome from "../components/BackHome";
 
 const Projects = () => {
   return (
@@ -169,6 +170,9 @@ const Projects = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex justify-center items-center p-5">
+      <BackHome />
       </div>
     </div>
   );
