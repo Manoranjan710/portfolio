@@ -15,8 +15,8 @@ const Home = () => {
     <div className= "bg-[#4d4c4c]  h-screen text-white">
       <div className='flex flex-col-reverse md:flex-row justify-center items-center md:max-w-screen-lg md:mx-auto md:h-full px-5 md:px-4'>
         <div className='flex flex-col justify-center h-full md:mt-0 mt-6'>
-            <h1 className=' text-white md:text-5xl text-xl font-semibold'> Aspiring Frontend developer</h1>
-            <p className=' text-gray-200 py-2 md:py-4 max-w-3xl text-lg md:text-xl' > Ambitious and versatile Front-End Developer with a passion for creating visually appealing and user-friendly interfaces. Proficient in HTML, CSS, JavaScript, and React, I am driven by a genuine enthusiasm for crafting seamless web experiences. </p>
+            <h1 className=' text-white md:text-5xl text-xl font-semibold'>  Frontend developer</h1>
+            <p className=' text-gray-200 py-2 md:py-4 max-w-3xl text-lg md:text-xl' > Eager and adaptable Front-End Developer with a year of experience, dedicated to crafting visually captivating and intuitive interfaces. Skilled in HTML, CSS, JavaScript, React and NextJS. I thrive on the challenge of delivering seamless web experiences. Passionate about enhancing user engagement through innovative design and functionality. </p>
             <button className='group bg-gradient-to-r from-cyan-500 to-blue-500  w-fit flex text-center p-3 rounded-lg hover:scale-110 shadow-md shadow-slate-950 duration-300 ' onClick={handleOnClick}>
               Projects
               <span>

@@ -15,10 +15,7 @@ const About = () => {
       </h2>
       <p className=" text-white md:text-xl mt-3 ">
         {" "}
-        Passionate and dedicated professional with a background in 3D
-        visualization, now transitioning to a career in Frontend Development.
-        Proficient in HTML, CSS, JavaScript, React.js, Python, and Bootstrap. I
-        have acquired a strong foundation in web development technologies.
+        Passionate and dedicated professional with one year of experience as a Frontend Developer, previously working as a 3D Visualizer at Livspace. Proficient in HTML, CSS, JavaScript, React.js, NextJS, Python and Bootstrap, I have honed a strong foundation in web development technologies. Excited to leverage my background in 3D visualization to enhance user experiences and contribute to the success of a progressive team with my frontend development skills.
         {/* Through self-directed learning and hands-on projects, I have honed my
         skills in creating responsive and visually appealing web interfaces. */}
         {/* With a keen eye for design and a drive for continuous improvement, I am

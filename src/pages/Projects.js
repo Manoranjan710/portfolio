@@ -90,7 +90,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className=" md:h-[min]h-min shadow-lg shadow-black bg-slate-100 p-6 md:m-6 m-2 text-black rounded-lg w-[10rem] md:w-[30rem] ">
+        <div className=" md:h-[min] h-min shadow-lg shadow-black bg-slate-100 p-6 md:m-6 m-2 text-black rounded-lg w-[10rem] md:w-[30rem] ">
           <a
             href="https://quizz-iq.vercel.app/"
             target="_blank"
