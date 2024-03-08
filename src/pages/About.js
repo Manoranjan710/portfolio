@@ -6,7 +6,7 @@ const About = () => {
     <div className="bg-[#4d4c4c] md:h-screen text-white p-8">
       <h1 className="text-[#d4e9fa] md:text-3xl text-xl font-bold font-['Raleway']">
         {" "}
-        ABOUT ME...
+        ABOUT MANORANJAN
       </h1>
       <h2 className="text-white md:text-xl mt-2 md:mt-6 ">
         {" "}
