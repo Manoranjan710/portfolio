@@ -1,12 +1,13 @@
+'use client'
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 
 const BackHome = () => {
 
-    const navigate = useNavigate();
+    const router = useRouter();
 
     const handleOnClick = () => {
-        navigate('/');
+        router.push('/');
     }
 
 

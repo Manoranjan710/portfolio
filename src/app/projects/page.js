@@ -1,10 +1,60 @@
 import React from "react";
-import BackHome from "../components/BackHome";
+import BackHome from "../../components/BackHome";
 
 const Projects = () => {
   return (
     <div className="bg-[#4d4c4c] h-full md:min-h-fit   text-white">
       <div className=" grid md:grid-flow-row md:grid-cols-2 grid-flow-col md:grid-rows-2 grid-rows-2 md:gap-7 gap-1 justify-items-center">
+        <div className=" md:col-span-2 md:h-minh-min shadow-lg shadow-black bg-slate-100 p-3 md:m-6 m-2 text-black rounded-lg w-[10rem] md:w-full">
+          <a
+            href="https://wash-hub-frontend.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              className=" hover:scale-105 duration-300 rounded-lg md:max-h-[28rem] md:w-full md:object-cover"
+              src="/images/washhub.png"
+              alt="WashHub - Multi-Vendor Car Wash Marketplace"
+            />
+          </a>
+          <div className="md:mt-7 mt-2">
+            <h2 className="md:text-3xl text-base font-bold mt-2 ">
+              {" "}
+              WashHub — Multi-Vendor Car Wash Marketplace{" "}
+            </h2>
+            <p className=" text-sm md:text-lg font-medium mt-3">
+              Production-deployed full-stack marketplace with three user roles
+              (customer, vendor, superadmin) covering end-to-end booking, real
+              Razorpay payments (UPI &amp; card), and AI features. Engineered a
+              concurrency-safe booking engine using PostgreSQL row-locking,
+              geo-based discovery via the Haversine formula, webhook-first
+              payment verification, and a two-layer Redis + React Query cache.
+              Integrated GPT-4o-mini for smart search, recommendations, and
+              review sentiment tagging.{" "}
+            </p>
+            <h1 className=" text-base font-semibold mt-2">
+              {" "}
+              <span className="italic">Stack used:</span> Next.js 14, TypeScript,
+              Node.js, Express, Prisma, PostgreSQL, Redis, Zustand, React Query,
+              Razorpay, OpenAI, Leaflet.js
+            </h1>
+            <div className=" flex flex-row items-center justify-center gap-4 md:mt-3 mt-2">
+              <a
+                href="https://wash-hub-frontend.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className=" shadow-md shadow-black rounded-2xl hover:scale-125 duration-300"
+                  width="30"
+                  height="30"
+                  src="https://img.icons8.com/ios-filled/50/domain.png"
+                  alt="live site"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
         <div className=" md:h-minh-min shadow-lg shadow-black bg-slate-100 p-3 md:m-6 m-2 text-black rounded-lg w-[10rem] md:w-[30rem]">
           <a
             href="https://shopping-cart-nine-ochre.vercel.app/"
@@ -13,7 +63,7 @@ const Projects = () => {
           >
             <img
               className=" hover:scale-105 duration-300 rounded-lg"
-              src="../../images/shooping-cart.png"
+              src="/images/shooping-cart.png"
               alt=""
             />
           </a>
@@ -57,7 +107,7 @@ const Projects = () => {
           >
             <img
               className=" hover:scale-105 duration-300 rounded-lg"
-              src="../../images/weather-app.png"
+              src="/images/weather-app.png"
               alt=""
             />
           </a>
@@ -98,7 +148,7 @@ const Projects = () => {
           >
             <img
               className=" hover:scale-105 duration-300 rounded-lg"
-              src="../../images/quiz-app.png"
+              src="/images/quiz-app.png"
               alt=""
             />
           </a>
@@ -138,7 +188,7 @@ const Projects = () => {
           >
             <img
               className=" hover:scale-105 duration-300 rounded-lg"
-              src="../../images/text-utils.png"
+              src="/images/text-utils.png"
               alt=""
             />
           </a>

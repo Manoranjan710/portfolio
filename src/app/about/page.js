@@ -1,5 +1,5 @@
 import React from "react";
-import BackHome from "../components/BackHome";
+import BackHome from "../../components/BackHome";
 
 const About = () => {
   return (
@@ -15,21 +15,20 @@ const About = () => {
       </h2>
       <p className=" text-white md:text-xl mt-3 ">
         {" "}
-        Passionate and dedicated professional with one year of experience as a Frontend Developer, previously working as a 3D Visualizer at Livspace. Proficient in HTML, CSS, JavaScript, React.js, NextJS, Python and Bootstrap, I have honed a strong foundation in web development technologies. Excited to leverage my background in 3D visualization to enhance user experiences and contribute to the success of a progressive team with my frontend development skills.
-        {/* Through self-directed learning and hands-on projects, I have honed my
-        skills in creating responsive and visually appealing web interfaces. */}
-        {/* With a keen eye for design and a drive for continuous improvement, I am
-        eager to apply my technical expertise and creativity to contribute to
-        innovative frontend projects. As a versatile learner, I thrive in
-        dynamic environments and possess excellent problem-solving and
-        collaboration abilities.  */}
-        I am excited to leverage my past experience and
-        newfound frontend development skills to build immersive user experiences
-        and contribute to the success of a forward-thinking team.{" "}
+        Frontend-focused Full Stack Developer with 3.6 years of experience delivering
+        enterprise-scale cloud dashboards and AI-powered platforms. I specialize in
+        Next.js, React, TypeScript, and Node.js, with a strong emphasis on performance
+        — achieving 40–60% reductions in load times across high-traffic dashboards
+        through code splitting, lazy loading, memoization, and virtual scrolling.
       </p>
-      <p className=" text-white md:text-xl">
+      <p className=" text-white md:text-xl mt-3 ">
         {" "}
-        I have 3 years of experience as a 3D Visualizer in Livspace company.
+        Most recently, I contributed to production-grade cloud infrastructure UI at
+        OLA Krutrim — architecting dashboards for managing virtual machines, storage,
+        and load balancers used by thousands of users — and engineered RAG-based AI
+        analytics systems using OpenAI APIs and the Qdrant vector database. I enjoy
+        owning the full delivery lifecycle: system design, development, performance
+        tuning, and cloud deployment.
       </p>
 
       <div className="md:mt-10 mt-3">
@@ -82,6 +81,36 @@ const About = () => {
             <img
               width="50"
               height="50"
+              src="https://img.icons8.com/fluency-systems-filled/240/FFFFFF/nextjs.png"
+              alt="nextjs"
+              className=" shadow-md shadow-white rounded p-1 bg-black"
+            />
+            <h2 className="text-white md:text-xl mt-3">Next.js</h2>
+          </div>
+          <div className="flex flex-col justify-center">
+            <img
+              width="50"
+              height="50"
+              src="https://img.icons8.com/color/480/typescript.png"
+              alt="typescript"
+              className=" shadow-md shadow-blue-500 rounded p-1"
+            />
+            <h2 className="text-white md:text-xl mt-3">TypeScript</h2>
+          </div>
+          <div className="flex flex-col justify-center">
+            <img
+              width="50"
+              height="50"
+              src="https://img.icons8.com/color/480/nodejs.png"
+              alt="nodejs"
+              className=" shadow-md shadow-green-500 rounded p-1"
+            />
+            <h2 className="text-white md:text-xl mt-3">Node.js</h2>
+          </div>
+          <div className="flex flex-col justify-center">
+            <img
+              width="50"
+              height="50"
               src="https://img.icons8.com/color/480/tailwindcss.png"
               alt="tailwindcss"
               className=" shadow-md shadow-cyan-500 rounded p-1"
@@ -107,6 +136,36 @@ const About = () => {
               className=" shadow-md shadow-yellow-200 rounded p-1"
             />
             <h2 className="text-white md:text-xl mt-3">Python</h2>
+          </div>
+          <div className="flex flex-col justify-center">
+            <img
+              width="50"
+              height="50"
+              src="https://img.icons8.com/fluency-systems-filled/240/FFFFFF/express-js.png"
+              alt="express"
+              className=" shadow-md shadow-white rounded p-1 bg-black"
+            />
+            <h2 className="text-white md:text-xl mt-3">Express</h2>
+          </div>
+          <div className="flex flex-col justify-center">
+            <img
+              width="50"
+              height="50"
+              src="https://img.icons8.com/color/480/postgreesql.png"
+              alt="postgresql"
+              className=" shadow-md shadow-blue-400 rounded p-1"
+            />
+            <h2 className="text-white md:text-xl mt-3">PostgreSQL</h2>
+          </div>
+          <div className="flex flex-col justify-center">
+            <img
+              width="50"
+              height="50"
+              src="https://img.icons8.com/color/480/mongodb.png"
+              alt="mongodb"
+              className=" shadow-md shadow-green-500 rounded p-1"
+            />
+            <h2 className="text-white md:text-xl mt-3">MongoDB</h2>
           </div>
           <div>
             <img

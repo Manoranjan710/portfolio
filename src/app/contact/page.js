@@ -1,5 +1,5 @@
 import React from "react";
-import BackHome from "../components/BackHome";
+import BackHome from "../../components/BackHome";
 
 const Contact = () => {
   // const [name, setName] = useState('');

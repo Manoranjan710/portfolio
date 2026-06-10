@@ -1,5 +1,6 @@
+"use client";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -33,7 +34,7 @@ const Navbar = () => {
         </button>
         {showDropdown && (
           <ul className=" text-sm absolute left-0 mt-2 mr-6 bg-transparent flex flex-col justify-start  ">
-            <Link to="/">
+            <Link href="/">
               <li
                 className="block mr-4 hover:scale-105 py-2 duration-300"
                 onClick={handleDropdownToggle}
@@ -41,7 +42,7 @@ const Navbar = () => {
                 Home
               </li>
             </Link>
-            <Link to="/about">
+            <Link href="/about">
               <li
                 className="block mr-4 hover:scale-105 py-2 duration-300"
                 onClick={handleDropdownToggle}
@@ -49,7 +50,7 @@ const Navbar = () => {
                 About
               </li>
             </Link>
-            <Link to="/projects">
+            <Link href="/projects">
               <li
                 className="block mr-4 hover:scale-105 py-2 duration-300"
                 onClick={handleDropdownToggle}
@@ -57,7 +58,7 @@ const Navbar = () => {
                 Projects
               </li>
             </Link>
-            <Link to="/contact">
+            <Link href="/contact">
               <li
                 className="block mr-4 hover:scale-105 py-2 duration-300"
                 onClick={handleDropdownToggle}
@@ -69,22 +70,22 @@ const Navbar = () => {
         )}
       </div>
       <ul className="hidden md:flex md:flex-row md:space-x-14 md:mr-20 text-sm md:text-xl">
-        <Link to="/">
+        <Link href="/">
           <li className="shadow shadow-md shadow-white hover:shadow-xl rounded-lg p-2 hover:scale-105 duration-300">
             Home
           </li>
         </Link>
-        <Link to="/about">
+        <Link href="/about">
           <li className="shadow shadow-md shadow-white hover:shadow-xl rounded-lg p-2 hover:scale-105 duration-300">
             About me
           </li>
         </Link>
-        <Link to="/projects">
+        <Link href="/projects">
           <li className="shadow shadow-md shadow-white hover:shadow-xl rounded-lg p-2 hover:scale-105 duration-300">
             Projects
           </li>
         </Link>
-        <Link to="/contact">
+        <Link href="/contact">
           <li className="shadow shadow-md shadow-white hover:shadow-xl rounded-lg p-2 hover:scale-105 duration-300">
             Contact
           </li>
