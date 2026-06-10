@@ -1,5 +1,19 @@
 import './globals.css'
+import { Inter, Great_Vibes } from 'next/font/google'
 import Navbar from '../components/Navbar'
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+
+const greatVibes = Great_Vibes({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-signature',
+  display: 'swap',
+})
 
 export const metadata = {
   title: 'Manoranjan D Salunke | Full Stack Developer',
@@ -12,7 +26,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${greatVibes.variable}`}>
       <body>
         <Navbar />
         {children}

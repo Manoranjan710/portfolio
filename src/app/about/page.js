@@ -4,7 +4,7 @@ import BackHome from "../../components/BackHome";
 const About = () => {
   return (
     <div className="bg-[#4d4c4c] md:h-screen text-white p-8">
-      <h1 className="text-[#d4e9fa] md:text-3xl text-xl font-bold font-['Raleway']">
+      <h1 className="text-[#d4e9fa] md:text-3xl text-xl font-bold">
         {" "}
         ABOUT ME...
       </h1>
