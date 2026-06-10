@@ -24,18 +24,16 @@ const links = [
     label: 'Resume',
     src: 'https://img.icons8.com/fluency/48/resume.png',
     href: '/resume.pdf',
-    download: true,
   },
 ];
 
 const SocialMedia = () => {
   return (
     <ul className="flex flex-row gap-4">
-      {links.map(({ id, label, src, href, download }) => (
+      {links.map(({ id, label, src, href }) => (
         <li key={id}>
           <a
             href={href}
-            download={download}
             target="_blank"
             rel="noreferrer"
             aria-label={label}

@@ -13,42 +13,6 @@ const projects = [
     href: 'https://wash-hub-frontend.vercel.app/',
     linkType: 'live',
   },
-  {
-    title: 'Shopping Cart Website',
-    image: '/images/shooping-cart.png',
-    description:
-      'Responsive website built using the Context API with useState and useEffect hooks, providing a real-time shopping experience.',
-    stack: 'ReactJS, TailwindCSS, PostCSS',
-    href: 'https://github.com/Manoranjan710/shopping-cart',
-    linkType: 'github',
-  },
-  {
-    title: 'Weather App',
-    image: '/images/weather-app.png',
-    description:
-      'Responsive website developed using a weather API with useState and useEffect hooks. Provides real-time weather data for any entered city.',
-    stack: 'ReactJS, TailwindCSS, PostCSS',
-    href: 'https://github.com/Manoranjan710/Simple_weather_app',
-    linkType: 'github',
-  },
-  {
-    title: 'Quiz App',
-    image: '/images/quiz-app.png',
-    description:
-      'User-friendly responsive quiz app powered by a random API. Offers multiple topics with live score updates and a final result screen.',
-    stack: 'ReactJS, TailwindCSS, PostCSS',
-    href: 'https://github.com/Manoranjan710/Quizz_IQ',
-    linkType: 'github',
-  },
-  {
-    title: 'Text Utility Website',
-    image: '/images/text-utils.png',
-    description:
-      'Responsive website built with React hooks. Converts text case, copies and clears text, and removes extra spaces — all in real time.',
-    stack: 'ReactJS, TailwindCSS, PostCSS',
-    href: 'https://github.com/Manoranjan710/TextUtils',
-    linkType: 'github',
-  },
 ];
 
 const linkIcon = {

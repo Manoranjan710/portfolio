@@ -20,93 +20,41 @@ const Contact = () => {
           </h2>
           <span className="mx-auto mt-4 block h-1 w-20 rounded-full bg-gradient-to-r from-gold-400 to-gold-200" />
           <p className="mx-auto mt-5 max-w-xl text-base text-ink-700">
-            Have a project in mind or just want to say hello? Drop me a message and
-            I&apos;ll get back to you soon.
+            Have a project in mind or just want to say hello? Reach out through any
+            of the channels below.
           </p>
         </ScrollReveal>
 
-        <div className="mx-auto mt-12 grid max-w-4xl gap-8 md:grid-cols-5">
-          <ScrollReveal direction="right" className="md:col-span-2 space-y-5">
-            <div className="rounded-2xl border border-gold-100 bg-white p-6 shadow-card">
-              <h3 className="text-lg font-bold text-ink-900">Contact details</h3>
-              <div className="mt-4 space-y-3 text-sm text-ink-700">
-                <p>
-                  <span className="font-semibold text-gold-700">Email</span>
-                  <br />
+        <ScrollReveal delay={120} className="mx-auto mt-12 max-w-md">
+          <div className="rounded-2xl border border-gold-100 bg-white p-6 text-center shadow-card md:p-8">
+            <h3 className="text-lg font-bold text-ink-900">Contact details</h3>
+            <div className="mt-5 space-y-4 text-sm text-ink-700">
+              <p>
+                <span className="font-semibold text-gold-700">Email</span>
+                <br />
+                <a
+                  href="mailto:manoranjan710@gmail.com"
+                  className="transition-colors hover:text-gold-600"
+                >
                   manoranjan710@gmail.com
-                </p>
-                <p>
-                  <span className="font-semibold text-gold-700">Phone</span>
-                  <br />
+                </a>
+              </p>
+              <p>
+                <span className="font-semibold text-gold-700">Phone</span>
+                <br />
+                <a
+                  href="tel:+919482207429"
+                  className="transition-colors hover:text-gold-600"
+                >
                   +91 9482207429
-                </p>
-              </div>
-              <div className="mt-6">
-                <SocialMedia />
-              </div>
+                </a>
+              </p>
             </div>
-          </ScrollReveal>
-
-          <ScrollReveal direction="left" delay={120} className="md:col-span-3">
-            <form
-              action="https://getform.io/f/754f2d1d-4dc1-425d-b186-c6a1fa49011d"
-              method="POST"
-              className="rounded-2xl border border-gold-100 bg-white p-6 shadow-card md:p-8"
-            >
-              <div className="mb-4">
-                <label
-                  htmlFor="name"
-                  className="mb-2 block text-sm font-semibold text-ink-800"
-                >
-                  Name
-                </label>
-                <input
-                  id="name"
-                  type="text"
-                  name="name"
-                  required
-                  className="w-full rounded-lg border border-gold-200 bg-cream-50 px-4 py-2.5 text-ink-900 outline-none transition-colors focus:border-gold-400 focus:ring-2 focus:ring-gold-200"
-                />
-              </div>
-              <div className="mb-4">
-                <label
-                  htmlFor="email"
-                  className="mb-2 block text-sm font-semibold text-ink-800"
-                >
-                  Email
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  name="email"
-                  required
-                  className="w-full rounded-lg border border-gold-200 bg-cream-50 px-4 py-2.5 text-ink-900 outline-none transition-colors focus:border-gold-400 focus:ring-2 focus:ring-gold-200"
-                />
-              </div>
-              <div className="mb-5">
-                <label
-                  htmlFor="message"
-                  className="mb-2 block text-sm font-semibold text-ink-800"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  required
-                  className="w-full rounded-lg border border-gold-200 bg-cream-50 px-4 py-2.5 text-ink-900 outline-none transition-colors focus:border-gold-400 focus:ring-2 focus:ring-gold-200"
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full rounded-xl bg-gradient-to-r from-gold-500 to-gold-300 px-6 py-3 font-semibold text-white shadow-gold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-gold-lg"
-              >
-                Let&apos;s talk
-              </button>
-            </form>
-          </ScrollReveal>
-        </div>
+            <div className="mt-6 flex justify-center">
+              <SocialMedia />
+            </div>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

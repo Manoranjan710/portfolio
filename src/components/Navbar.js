@@ -57,7 +57,7 @@ const Navbar = () => {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 md:px-8">
         <button
           onClick={() => handleNav('home')}
-          className="font-signature text-3xl md:text-5xl leading-none text-gold-gradient pr-2 hover:scale-105 transition-transform duration-300"
+          className="font-signature text-2xl py-3 md:text-5xl leading-none text-gold-gradient pr-2 hover:scale-105 transition-transform duration-300"
         >
           Manoranjan
         </button>

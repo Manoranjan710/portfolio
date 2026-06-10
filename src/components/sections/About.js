@@ -17,7 +17,7 @@ const tech = [
   { name: 'Python', src: 'https://img.icons8.com/fluency/240/python.png' },
   {
     name: 'Express',
-    src: 'https://img.icons8.com/fluency-systems-filled/240/express-js.png',
+    src: 'https://img.icons8.com/?size=100&id=sFWl80NH39SW&format=png&color=000000',
   },
   { name: 'PostgreSQL', src: 'https://img.icons8.com/color/480/postgreesql.png' },
   { name: 'MongoDB', src: 'https://img.icons8.com/color/480/mongodb.png' },
