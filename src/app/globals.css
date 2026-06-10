@@ -5,5 +5,40 @@
 @layer base {
   html {
     font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+    scroll-behavior: smooth;
   }
+
+  body {
+    background-color: #fffdf8;
+    color: #1a1a1a;
+  }
+
+  /* Offset anchor targets so the sticky navbar doesn't cover headings */
+  section[id] {
+    scroll-margin-top: 6rem;
+  }
+}
+
+@layer utilities {
+  .text-gold-gradient {
+    background-image: linear-gradient(120deg, #a4731a 0%, #cfa23c 45%, #e8d196 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+/* Custom gold scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #fbf7ee;
+}
+::-webkit-scrollbar-thumb {
+  background: #dcb863;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #cfa23c;
 }

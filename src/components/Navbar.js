@@ -1,27 +1,99 @@
-"use client";
-import React, { useState } from "react";
-import Link from "next/link";
+'use client';
+import React, { useEffect, useState } from 'react';
+
+const links = [
+  { id: 'home', label: 'Home' },
+  { id: 'about', label: 'About' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'contact', label: 'Contact' },
+];
 
 const Navbar = () => {
-  const [showDropdown, setShowDropdown] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [active, setActive] = useState('home');
 
-  const handleDropdownToggle = () => {
-    setShowDropdown(!showDropdown);
+  // Shrink / add shadow once the user scrolls away from the top.
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  // Scroll-spy: highlight the link for the section currently in view.
+  useEffect(() => {
+    const sections = links
+      .map((l) => document.getElementById(l.id))
+      .filter(Boolean);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(entry.target.id);
+        });
+      },
+      { rootMargin: '-45% 0px -50% 0px', threshold: 0 }
+    );
+
+    sections.forEach((s) => observer.observe(s));
+    return () => observer.disconnect();
+  }, []);
+
+  const handleNav = (id) => {
+    setOpen(false);
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <div className="flex md:flex-row justify-between items-center h-20 p-3 text-white bg-slate-900">
-      <div>
-        <h1 className="md:text-5xl text-3xl font-signature ml-2">Manoranjan</h1>
-      </div>
-      <div className="md:hidden relative mr-3 text-sm">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-cream-50/90 backdrop-blur-md shadow-[0_8px_30px_-18px_rgba(26,26,26,0.4)] border-b border-gold-100'
+          : 'bg-transparent'
+      }`}
+    >
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 md:px-8">
         <button
-          className="flex items-center px-3 py-2 border border-white rounded text-white hover:text-gray-300 hover:border-gray-300"
-          onClick={handleDropdownToggle}
+          onClick={() => handleNav('home')}
+          className="font-signature text-3xl md:text-5xl leading-none text-gold-gradient pr-2 hover:scale-105 transition-transform duration-300"
+        >
+          Manoranjan
+        </button>
+
+        {/* Desktop links */}
+        <ul className="hidden items-center gap-2 md:flex">
+          {links.map((link) => (
+            <li key={link.id}>
+              <button
+                onClick={() => handleNav(link.id)}
+                className={`relative rounded-lg px-4 py-2 text-base font-medium transition-all duration-300 ${
+                  active === link.id
+                    ? 'text-gold-700'
+                    : 'text-ink-700 hover:text-gold-600'
+                }`}
+              >
+                {link.label}
+                <span
+                  className={`absolute bottom-1 left-1/2 h-[2px] -translate-x-1/2 rounded-full bg-gold-400 transition-all duration-300 ${
+                    active === link.id ? 'w-6' : 'w-0'
+                  }`}
+                />
+              </button>
+            </li>
+          ))}
+        </ul>
+
+        {/* Mobile toggle */}
+        <button
+          className="flex items-center justify-center rounded-lg border border-gold-200 p-2 text-gold-700 md:hidden"
+          onClick={() => setOpen((v) => !v)}
+          aria-label="Toggle menu"
         >
           <svg
-            className={`w-4 h-4 fill-current ${
-              showDropdown ? "rotate-180" : ""
+            className={`h-5 w-5 fill-current transition-transform duration-300 ${
+              open ? 'rotate-90' : ''
             }`}
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -32,66 +104,32 @@ const Navbar = () => {
             />
           </svg>
         </button>
-        {showDropdown && (
-          <ul className=" text-sm absolute left-0 mt-2 mr-6 bg-transparent flex flex-col justify-start  ">
-            <Link href="/">
-              <li
-                className="block mr-4 hover:scale-105 py-2 duration-300"
-                onClick={handleDropdownToggle}
+      </nav>
+
+      {/* Mobile menu */}
+      <div
+        className={`md:hidden overflow-hidden border-t border-gold-100 bg-cream-50/95 backdrop-blur-md transition-[max-height] duration-300 ${
+          open ? 'max-h-72' : 'max-h-0'
+        }`}
+      >
+        <ul className="flex flex-col px-5 py-2">
+          {links.map((link) => (
+            <li key={link.id}>
+              <button
+                onClick={() => handleNav(link.id)}
+                className={`block w-full rounded-lg px-3 py-3 text-left text-base font-medium transition-colors ${
+                  active === link.id
+                    ? 'bg-gold-50 text-gold-700'
+                    : 'text-ink-700 hover:bg-gold-50'
+                }`}
               >
-                Home
-              </li>
-            </Link>
-            <Link href="/about">
-              <li
-                className="block mr-4 hover:scale-105 py-2 duration-300"
-                onClick={handleDropdownToggle}
-              >
-                About
-              </li>
-            </Link>
-            <Link href="/projects">
-              <li
-                className="block mr-4 hover:scale-105 py-2 duration-300"
-                onClick={handleDropdownToggle}
-              >
-                Projects
-              </li>
-            </Link>
-            <Link href="/contact">
-              <li
-                className="block mr-4 hover:scale-105 py-2 duration-300"
-                onClick={handleDropdownToggle}
-              >
-                Contact
-              </li>
-            </Link>
-          </ul>
-        )}
+                {link.label}
+              </button>
+            </li>
+          ))}
+        </ul>
       </div>
-      <ul className="hidden md:flex md:flex-row md:space-x-14 md:mr-20 text-sm md:text-xl">
-        <Link href="/">
-          <li className="shadow shadow-md shadow-white hover:shadow-xl rounded-lg p-2 hover:scale-105 duration-300">
-            Home
-          </li>
-        </Link>
-        <Link href="/about">
-          <li className="shadow shadow-md shadow-white hover:shadow-xl rounded-lg p-2 hover:scale-105 duration-300">
-            About me
-          </li>
-        </Link>
-        <Link href="/projects">
-          <li className="shadow shadow-md shadow-white hover:shadow-xl rounded-lg p-2 hover:scale-105 duration-300">
-            Projects
-          </li>
-        </Link>
-        <Link href="/contact">
-          <li className="shadow shadow-md shadow-white hover:shadow-xl rounded-lg p-2 hover:scale-105 duration-300">
-            Contact
-          </li>
-        </Link>
-      </ul>
-    </div>
+    </header>
   );
 };
 
